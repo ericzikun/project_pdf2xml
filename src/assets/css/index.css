@@ -13,35 +13,53 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+.all{
+  height:auto;
+}
 .title{
   /* height:30px; */
-  height: 100%;
+  
+  height: 10%;
   width: 100%;
 
   line-height:30px;
 
   /* text-align: right; */
   
-  text-indent: 55em;
-  
+  /* text-indent: 50%; */
+  /* margin-right: 20%; */
+  display: flex;
+  flex-direction: raw;
+  justify-content: flex-end;
   background: #2b2a2a;
 
   color:rgba(255, 255, 255, 0.651);
 
   padding:0px;
 }
+.topcontent{
+  /* padding-left: 100px; */
+  /* flex: 1; */
+  
+}
 .topright{
-  margin-left: 60px;
+  margin-left: 5%;
+  margin-right: 2%;
+  /* flex: auto; */
 }
 .bottom{
   /* height:200px; */
-  height: 100%;
+  /* margin-top: 22%; */
+  height: 23%;
   width: 100%;
+  bottom: 0;
   line-height:20px;
   
   background: #2b2a2a;
 
-  color:#fff
+  color:#fff;
+  position: fixed;
+  bottom:0;left:0;
 }
 .bottomdiv{
   display: flex;
@@ -86,24 +104,36 @@
   backgroundColor:'red'
 } */
 .home{
-  /* background: #4b28281e; */
-  background: #ffffff;
-  height:577px;
-  margin-top: 0px;
+  background: #4b28281e;
+  /* background: #ffffff; */
+  /* background:  */
+  height: 750px;
+
+  /* height: auto; */
+  /* height: 60%; */
+  /* bottom: 0px; */
+  /* padding: 0; */
+  /* position: absolute; */
 }
+/* .blank{
+  height: 100px;
+  background: #4b28281e;
+} */
 .smartcite{
   font-family: fantasy;
   color:#2dc17a;
   font-size: 80px;
   font-weight:  bold; 
   text-align: center;
-  padding: 100px 5px 30px 5px;
+  padding: 200px 5px 30px 5px;
+  /* padding：50% 5% 30% 5%; */
 }
 .button{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0px;
+  /* padding: 0px; */
+  
 }
 .submit{
   margin-left: 20px;
@@ -113,6 +143,7 @@
 .resulttitle{
   background: #ffffff;
   height:80px;
+  /* height: ; */
   margin-top: 0px;
   display: flex;
   flex-direction: row;
@@ -128,11 +159,11 @@
 }
 .searchbutton2{
   padding: 30px;
-  margin-left: 300px;
+  margin-left: 30%;
 }
 .result{
   background: #dfd4d436;
-  height:500px;
+  height:640px;
   margin-top: 0px;
 }
 .resultcontent{
@@ -140,14 +171,14 @@
   flex-direction: row;
 }
 .resultcontent1{
-  width:500px;
+  width:50%;
   margin-left: 150px;
   margin-top:50px;
   font-family:Microsoft YaHei;
   font-size: 20px;
 }
 .resultcontent2{
-  width:400px;
+  width:20%;
   margin-left: 50px;
   margin-top:50px;
   font-family:Microsoft YaHei;

@@ -8,15 +8,37 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = { 
+        file: [],  
+    }
+  }
+  onChange = ({ file }) => {
+    // this.setState({
+    //   this.fileList.push(file);
+    // })
+    console.log('file', file);
+    console.log(typeof(file))
   }
   render() {
+    const { fileList } = this.state
+    const { file } = this.state
+    const props = {
+        name: 'UploadFile',//name得看接口需求，name与接口需要的name一致
+        // action: 'http://.......',//接口路径
+        data: {  },//接口需要的参数，无参数可以不写
+        multiple: true,//支持多个文件
+        showUploadList: true,//展示文件列表
+    }
+
     return (
       <div className="home">
         <div className="smartcite">SmartCite</div>
         <div className="button">
           <div>
-            <Upload>
+            <Upload {...props}
+              fileList={file}
+              onChange={this.onChange}
+            >
               <Button type="Link" shape="round" size="large">
                 <UploadOutlined /> Select file
               </Button>
@@ -36,6 +58,7 @@ class Home extends Component {
             </Link>
           </div>
         </div>
+        <div className="blank"></div>
       </div>
     )
   }

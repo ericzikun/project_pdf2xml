@@ -8,16 +8,22 @@ import {MailOutlined } from '@ant-design/icons'
 import {QqOutlined} from '@ant-design/icons'
 function App() {
   return (
-    <div>
+    <div >
+      <div className ="all">
       <Router>
-      <header className="title">
+      <div className="title">
         {' '}
+        {/* <div> */}
+          <div className="topcontent">
         欢迎使用SmartCite引文上下文抽取系统
-        <Link to="/" className="topright">
+        </div>
+        <div className="topright">
+        <Link to="/" >
         | 首页 |
         </Link>
-        
-      </header>
+        </div>
+        {/* </div> */}
+      </div>
       
         <div>
           {/* <Link to ="/">跳转首页</Link>
@@ -32,6 +38,7 @@ function App() {
           </Route>
         </div>
       </Router>
+      
       <header className="bottom">
         <div className="bottomdiv">
           <div className="bottomdiv1">
@@ -48,7 +55,7 @@ function App() {
             </div>
 
           </div>
-
+          
           <div className="bottomdiv2">
             <p className="bottomcontent2" style={{fontSize:20}}>联系我们</p>
             <div className="bottomicon">
@@ -63,6 +70,7 @@ function App() {
           </div>
         </div>
       </header>
+    </div>
     </div>
   )
 }
