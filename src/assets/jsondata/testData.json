@@ -29,15 +29,15 @@
                 "contextList": [
                     {
                         "id": 1,
-                        "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+                        "text": "in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
                     },
                     {
                         "id": 3,
-                        "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+                        "text": "how people become embroiled in organised prisoner abuse  and even suicide bombings ."
                     },
                     {
                         "id": 4,
-                        "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+                        "text": ", and as a result this line of research is no longer amenable to direct experimental studies."
                     },
                     {
                         "id": 5,
@@ -54,7 +54,7 @@
             {
                 "reference": {
                     "volume": "null",
-                    "article_title": "test title",
+                    "article_title": "The authoritarian personality",
                     "issue": "null",
                     "fpage": "null",
                     "year": "1974",
@@ -76,7 +76,7 @@
                 "contextList": [
                     {
                         "id": 1,
-                        "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+                        "text": " horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
                     },
                     {
                         "id": 3,
@@ -97,7 +97,288 @@
                 ],
                 "id": 2,
                 "text": "[2]"
+            },
+            {
+              "reference": {
+                  "volume": "null",
+                  "article_title": "What was authority?",
+                  "issue": "null",
+                  "fpage": "null",
+                  "year": "1974",
+                  "id": "pone.0000039-Milgram2",
+                  "label": "null",
+                  "source": "Obedience to Authority:",
+                  "lpage": "null",
+                  "authors": [
+                      {
+                          "surName": "Mike",
+                          "givenName": "JK"
+                      }
+                  ]
+              },
+              "sentence": {
+                  "id": 2,
+                  "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+              },
+              "contextList": [
+                  {
+                      "id": 1,
+                      "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+                  },
+                  {
+                      "id": 3,
+                      "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+                  },
+                  {
+                      "id": 4,
+                      "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+                  },
+                  {
+                      "id": 5,
+                      "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+                  },
+                  {
+                      "id": 6,
+                      "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
+                  }
+              ],
+              "id": 3,
+              "text": "[2]"
+          },
+          {
+            "reference": {
+                "volume": "null",
+                "article_title": "The psychology of aggression",
+                "issue": "null",
+                "fpage": "null",
+                "year": "1974",
+                "id": "pone.0000039-Milgram2",
+                "label": "null",
+                "source": "Obedience to Authority:",
+                "lpage": "null",
+                "authors": [
+                    {
+                        "surName": "Ericon",
+                        "givenName": "PK"
+                    }
+                ]
+            },
+            "sentence": {
+                "id": 2,
+                "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+            },
+            "contextList": [
+                {
+                    "id": 1,
+                    "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+                },
+                {
+                    "id": 3,
+                    "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+                },
+                {
+                    "id": 4,
+                    "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+                },
+                {
+                    "id": 5,
+                    "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+                },
+                {
+                    "id": 6,
+                    "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
+                }
+            ],
+            "id": 4,
+            "text": "[2]"
+        },
+        {
+          "reference": {
+              "volume": "null",
+              "article_title": " University of Michigan Institute for Social Research",
+              "issue": "null",
+              "fpage": "null",
+              "year": "1974",
+              "id": "pone.0000039-Milgram2",
+              "label": "null",
+              "source": "Obedience to Authority:",
+              "lpage": "null",
+              "authors": [
+                  {
+                      "surName": "Steven",
+                      "givenName": "Jobs"
+                  }
+              ]
+          },
+          "sentence": {
+              "id": 2,
+              "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+          },
+          "contextList": [
+              {
+                  "id": 1,
+                  "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+              },
+              {
+                  "id": 3,
+                  "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+              },
+              {
+                  "id": 4,
+                  "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+              },
+              {
+                  "id": 5,
+                  "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+              },
+              {
+                  "id": 6,
+                  "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
+              }
+          ],
+          "id": 5,
+          "text": "[2]"
+      },
+      {
+        "reference": {
+            "volume": "null",
+            "article_title": " Paris: Bureaux du Progrès Médical",
+            "issue": "null",
+            "fpage": "null",
+            "year": "1974",
+            "id": "pone.0000039-Milgram2",
+            "label": "null",
+            "source": "Obedience to Authority:",
+            "lpage": "null",
+            "authors": [
+                {
+                    "surName": "Jodan",
+                    "givenName": "Micheal"
+                }
+            ]
+        },
+        "sentence": {
+            "id": 2,
+            "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+        },
+        "contextList": [
+            {
+                "id": 1,
+                "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+            },
+            {
+                "id": 3,
+                "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+            },
+            {
+                "id": 4,
+                "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+            },
+            {
+                "id": 5,
+                "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+            },
+            {
+                "id": 6,
+                "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
             }
+        ],
+        "id": 6,
+        "text": "[2]"
+    },
+    {
+      "reference": {
+          "volume": "null",
+          "article_title": " Experimental studies of personal pressure and resistance",
+          "issue": "null",
+          "fpage": "null",
+          "year": "1974",
+          "id": "pone.0000039-Milgram2",
+          "label": "null",
+          "source": "Obedience to Authority:",
+          "lpage": "null",
+          "authors": [
+              {
+                  "surName": "Feng",
+                  "givenName": "KK"
+              }
+          ]
+      },
+      "sentence": {
+          "id": 2,
+          "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+      },
+      "contextList": [
+          {
+              "id": 1,
+              "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+          },
+          {
+              "id": 3,
+              "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+          },
+          {
+              "id": 4,
+              "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+          },
+          {
+              "id": 5,
+              "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+          },
+          {
+              "id": 6,
+              "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
+          }
+      ],
+      "id": 7,
+      "text": "[2]"
+  },{
+    "reference": {
+        "volume": "null",
+        "article_title": " National Science Foundation",
+        "issue": "null",
+        "fpage": "null",
+        "year": "1974",
+        "id": "pone.0000039-Milgram2",
+        "label": "null",
+        "source": "Obedience to Authority:",
+        "lpage": "null",
+        "authors": [
+            {
+                "surName": "Jason",
+                "givenName": "null"
+            }
+        ]
+    },
+    "sentence": {
+        "id": 2,
+        "text": "He showed that in a social structure with recognised lines of authority, ordinary people could be relatively easily persuaded to give what seemed to be even lethal electric shocks to another randomly chosen person , ."
+    },
+    "contextList": [
+        {
+            "id": 1,
+            "text": "In an attempt to understand events in which people carry out horrific acts against their fellows Stanley Milgram carried out a series of experiments in the 1960s at Yale University that directly attempted to investigate whether ordinary people might obey the orders of an authority figure to cause pain to a stranger."
+        },
+        {
+            "id": 3,
+            "text": "His results are often cited today, for example, recently in helping to explain how people become embroiled in organised prisoner abuse  and even suicide bombings ."
+        },
+        {
+            "id": 4,
+            "text": "However, his study also ignited a far-reaching debate about the ethics of deception and of putting subjects in a highly distressing situation in the course of research , , and as a result this line of research is no longer amenable to direct experimental studies."
+        },
+        {
+            "id": 5,
+            "text": "Milgram's paradigm was an experiment that subjects were led to believe was a study of the effects of punishment on learning."
+        },
+        {
+            "id": 6,
+            "text": "The subjects, referred to as Teachers, were asked to administer electric shocks of increasing voltages to another subject (the Learner) whenever he gave a wrong answer in a word-memory experiment."
+        }
+    ],
+    "id": 8,
+    "text": "[2]"
+}
         ]
     }
 }
