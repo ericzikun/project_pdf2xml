@@ -73,27 +73,22 @@ const Result = () => {
     // console.log(referenceList,typeof(referenceList),data,typeof(data),paperData,);
     // console.log(contextList)
     // const getData=()=>{
-      const axios = require('axios');
       // axios.post('/test/upload/file', {
       //   firstName: 'Fred',
       //   lastName: 'Flintstone'
       // })
-      axios({
-        method: 'post',
-        url: '/test/upload/file',
-        // url: '/baidu',
-        data: {
-          // firstName: 'Fred',
-          // lastName: 'Flintstone'
-        }
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
+      
+      let data = { };
+      axios.post('/test/upload/file',data)
+      .then(res=>{
+          console.log('res=>',res);            
       })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    // }
   })
   // setPaperData(referenceList);
   const rowSelection = {
