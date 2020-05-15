@@ -10,7 +10,7 @@ import { Table, Radio, Divider } from 'antd'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import testData from '../assets/jsondata/testData.json'
-
+import axios from 'axios'
 const Result = () => {
   const data = [
     {
@@ -72,6 +72,28 @@ const Result = () => {
     // setPaperData(referenceList);
     // console.log(referenceList,typeof(referenceList),data,typeof(data),paperData,);
     // console.log(contextList)
+    // const getData=()=>{
+      const axios = require('axios');
+      // axios.post('/test/upload/file', {
+      //   firstName: 'Fred',
+      //   lastName: 'Flintstone'
+      // })
+      axios({
+        method: 'post',
+        url: '/test/upload/file',
+        // url: '/baidu',
+        data: {
+          // firstName: 'Fred',
+          // lastName: 'Flintstone'
+        }
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    // }
   })
   // setPaperData(referenceList);
   const rowSelection = {
@@ -100,6 +122,7 @@ const Result = () => {
       setCiteData(list1)
       setCiteData2(list3)
       console.log(list3)
+      
     },
     // getCheckboxProps: (record) => ({
     //   disabled: record.name === 'Disabled User',
