@@ -8,7 +8,7 @@ module.exports = function (app) {
     //     pathRewrite: {'^/test': ''},
     //     changeOrigin: true
     // }))
-    app.use(createProxyMiddleware('/test', {
+    app.use(createProxyMiddleware('/extract', {
       target: 'http://114.55.101.144:8080',
       changeOrigin: true
   }))

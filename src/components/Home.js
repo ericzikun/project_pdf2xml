@@ -14,39 +14,27 @@ const Home = ( ) => {
   const [fileName, setFileName]= useState('')
   const [response, setResponse] = useState('')
   const onChange = ({ file }) => {
-    console.log('file', file);
-    console.log(file.name);
+    console.log('--正在上传的file--', file)
+    localStorage.setItem("uploadFileName", file.name);
     setFileName(file.name)
-    localStorage.setItem("fileName",file.name);
-    setResponse({...file.response})
-    if (file.status == 'done'){
-      console.log('上传成功')
-      console.log(file.response.result)
-
-    }
     if (file.status == 'uploading'){
-      console.log('正在上传')
-      console.log(file.response)
+      localStorage.removeItem("fileName");
+      localStorage.removeItem("fileRes");
     }
   
-    // const axios = require('axios');
-    // axios.get('/test/upload/file', {
-    //   // firstName: 'Fred',
-    //   // lastName: 'Flintstone'
-    // })
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
+    
   }
-  
+  const onSuccessUpload = (res) => {
+    console.log('--返回的结果--', res)
+    localStorage.setItem("fileName", localStorage.getItem("uploadFileName"));
+    localStorage.setItem("fileRes", JSON.stringify(res));
+  }
     // const { fileList } = this.state
     // const { file } = this.state
     const props = {
         name: 'file',//name得看接口需求，name与接口需要的name一致
-        action: '/test/upload/file',//接口路径
+        // action: '/test/upload/file',//接口路径
+        action: '/extract',//接口路径
         data: {file} ,//接口需要的参数，无参数可以不写
         multiple: false,//支持多个文件
         showUploadList: true,//展示文件列表
@@ -56,19 +44,18 @@ const Home = ( ) => {
     }
     let history = useHistory();
     const submit=(  )=>{
-      if (fileName == ''){
+      if (!localStorage.getItem("fileName")){
         notification.error({
-          message: 'You haven\'t uploaded the file.    Please upload a pdf or xml file first.',
+          message: 'please wait patiently, the system is processing, Please upload a pdf or xml file first.',
           duration: 4,
           // description
         })
-      }
-      else{
+      } else{
         // <Link to="/Result"> </Link>
         history.push('/result')
         notification.success({
-          message: 'You have submitted, please wait patiently, the system is processing, please wait about 1min',
-          duration: 60,
+          message: 'You have submitted, , please wait about 1min',
+          duration: 10,
           // description
         })
         // let { history } = props
@@ -98,6 +85,7 @@ const Home = ( ) => {
             <Upload {...props}
               fileList={file}
               onChange={onChange}
+              onSuccess={onSuccessUpload}
             >
               <Button type="Link" shape="round" size="large">
                 <UploadOutlined /> Select file

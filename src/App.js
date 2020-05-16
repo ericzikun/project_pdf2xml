@@ -19,6 +19,7 @@ function App() {
         Welcome to use SmartCite citation context extraction system
         </div>
         <div className="topright">
+        <a href="http://www.w3school.com.cn">| xml download |   </a>
         <Link to="/" >
         | Home |
         </Link>

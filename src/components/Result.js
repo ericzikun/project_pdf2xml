@@ -9,7 +9,7 @@ import { List, Typography } from 'antd'
 import { Table, Radio, Divider } from 'antd'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import testData from '../assets/jsondata/testData.json'
+// import testData from '../assets/jsondata/testData.json'
 import axios from 'axios'
 // import fileName from './Home.js'
 const Result = () => {
@@ -34,6 +34,9 @@ const Result = () => {
       render: (text) => <a>{text}</a>,
     },
   ]
+  const fileRes = localStorage.getItem("fileRes");
+  const testData = JSON.parse(fileRes);
+  console.log('--testData--', testData.code);
   const paperData0 = [testData.data.refTags]
   // refTags.reference.article_title
 
@@ -136,7 +139,7 @@ const Result = () => {
   const [fileName, setFileName]= useState('')
   const props = {
     name: 'file',//name得看接口需求，name与接口需要的name一致
-    action: '/test/upload/file',//接口路径
+    action: '/extract',//接口路径
     data: {file} ,//接口需要的参数，无参数可以不写
     multiple: false,//支持多个文件
     showUploadList: true,//展示文件列表
