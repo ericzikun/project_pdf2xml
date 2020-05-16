@@ -11,6 +11,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import testData from '../assets/jsondata/testData.json'
 import axios from 'axios'
+// import fileName from './Home.js'
 const Result = () => {
   const data = [
     {
@@ -28,7 +29,7 @@ const Result = () => {
   ]
   const columns = [
     {
-      title: 'Citation',
+      title: 'List',
       dataIndex: 'title',
       render: (text) => <a>{text}</a>,
     },
@@ -36,8 +37,8 @@ const Result = () => {
   const paperData0 = [testData.data.refTags]
   // refTags.reference.article_title
 
-  const citeData01 = ['作者：', '发表时间：']
-  const citeData02 = ['引文上下文：']
+  const citeData01 = ['Author：', 'Publication time.：']
+  const citeData02 = ['Citation context：']
   // const [paperData, setPaperData] = useState(data)
   const [citeData, setCiteData] = useState(citeData01)
   const [citeData2, setCiteData2] = useState(citeData02)
@@ -84,11 +85,11 @@ const Result = () => {
       //   console.log(error);
       // });
       
-      let data = { };
-      axios.post('/test/upload/file',data)
-      .then(res=>{
-          console.log('res=>',res);            
-      })
+      // let data = { };
+      // axios.post('/test/upload/file',data)
+      // .then(res=>{
+      //     console.log('res=>',res);            
+      // })
   })
   // setPaperData(referenceList);
   const rowSelection = {
@@ -101,10 +102,10 @@ const Result = () => {
       // console.log(selectedRowKeys, JSON.stringify(paperData[0]))
       const list1 = [
         '作者: ' +
-          JSON.stringify(paperData[selectedRowKeys].authors[0].surName) +
+          JSON.stringify(paperData[selectedRowKeys].authors[0].surName).replace("\"","").replace("\"","")+
           ' ' +
-          JSON.stringify(paperData[selectedRowKeys].authors[0].givenName),
-        '发表时间:' + JSON.stringify(paperData[selectedRowKeys].year),
+          JSON.stringify(paperData[selectedRowKeys].authors[0].givenName).replace("\"","").replace("\"",""),
+        '发表时间:' + JSON.stringify(paperData[selectedRowKeys].year).replace("\"","").replace("\"",""),
       ]
       const list2 = [[
         '引文上下文:' + JSON.stringify(contextList[selectedRowKeys].text)
@@ -130,17 +131,51 @@ const Result = () => {
     top: 'topLeft',
     bottom: 'bottomRight',
   }
+  // 定义upload参数
+  const file = []
+  const [fileName, setFileName]= useState('')
+  const props = {
+    name: 'file',//name得看接口需求，name与接口需要的name一致
+    action: '/test/upload/file',//接口路径
+    data: {file} ,//接口需要的参数，无参数可以不写
+    multiple: false,//支持多个文件
+    showUploadList: true,//展示文件列表
+    headers: {
+      // "Content-Type": "multipart/form-data"
+    },
+}
+const onChange = ({ file }) => {
+  console.log('file', file);
+  console.log(file.name);
+  setFileName(file.name)
+  localStorage.setItem("fileName",file.name);
+  
+  if (file.status == 'done'){
+    console.log('上传成功')
+    console.log(file.response.result)
 
+  }
+  if (file.status == 'uploading'){
+    console.log('正在上传')
+    console.log(file.response)
+  }
+}
   return (
     <div>
       <div className="resulttitle">
         <div className="smartcite2">SmartCite</div>
         <div className="searchbutton2">
-          <Button type="default" shape="round">
+          {/* <Button type="default" shape="round">
             <SearchOutlined />
             <span>请选择pdf或者xml格式的文件进行引上下文抽取</span>
-          </Button>
-          <Upload>
+          </Button> */}
+          <Button type="default" shape="round" size="large" disabled='true'>
+              <SearchOutlined />
+                <span>{localStorage.getItem("fileName") ==''?'Please select a pdf or xml file for citation context extraction':localStorage.getItem("fileName")}</span>
+            </Button>
+          <Upload {...props}
+              fileList={file}
+              onChange={onChange}>
             <Button type="Link" shape="round">
               <UploadOutlined /> Select file
             </Button>
@@ -150,7 +185,7 @@ const Result = () => {
       <div className="result">
         <div className="resultcontent">
           <div className="resultcontent1">
-            <p>引文</p>
+            <p>Citations</p>
             <Table
               rowSelection={{
                 type: selectionType,
@@ -162,7 +197,7 @@ const Result = () => {
             />
           </div>
           <div className="resultcontent2">
-            <p>引文信息</p>
+            <p>Citation information</p>
             
             <List
               className="list"

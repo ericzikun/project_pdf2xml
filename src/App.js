@@ -47,14 +47,14 @@ function App() {
             <br />
             <div className="bottomcontent1">
             {/* 语义相关的引文上下文抽取工具 */}
-            <p>Semantic related citation context extraction tool</p>
+            <p>Semantically relevant citation context extraction tools</p>
             {/* 用户可以在
               smartcite中完成对引文的显式上下文,隐式上下文等所有语义相关的引文上下文的抽取 */}
             <p>
-              Users can complete the extraction of all semantically related citation contexts such as explicit and implicit contexts of citations in smartcite
+            The user can complete the extraction of all semantically relevant citation contexts in smartcite, including explicit and implicit contexts
             </p>
             {/* 集成Grobid工具,用户可以对pdf格式或者xml文件进行相关处理 */}
-            <p>Integrated Grobid tool, users can perform related processing on pdf format or xml file
+            <p>Integrated Grobid tool that allows users to process pdf or xml files
             </p>
             </div>
 
@@ -70,7 +70,7 @@ function App() {
              <QqOutlined style={{fontSize:50}}/>
              </div> */}
             </div>
-            <p className="bottomcontent2">email：chenruiguo@whu.edu.cn</p>
+            <p className="bottomcontent2">Email：chenruiguo@whu.edu.cn</p>
           </div>
         </div>
       </header>

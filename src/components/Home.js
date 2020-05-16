@@ -8,12 +8,16 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { notification } from 'antd'
 import axios from 'axios'
 import { useState } from 'react'
-const Home = () => {
-  const [file, setFile]= useState('')
+import { useHistory } from "react-router-dom";
+const Home = ( ) => {
+  const file = []
+  const [fileName, setFileName]= useState('')
   const [response, setResponse] = useState('')
   const onChange = ({ file }) => {
     console.log('file', file);
-    // setFile(file)
+    console.log(file.name);
+    setFileName(file.name)
+    localStorage.setItem("fileName",file.name);
     setResponse({...file.response})
     if (file.status == 'done'){
       console.log('上传成功')
@@ -50,12 +54,30 @@ const Home = () => {
           // "Content-Type": "multipart/form-data"
         },
     }
-    const submit=()=>{
-      notification.success({
-        message: '您已提交，请耐心等候，系统正在处理',
-        duration: 4.5,
-        // description
-      })
+    let history = useHistory();
+    const submit=(  )=>{
+      if (fileName == ''){
+        notification.error({
+          message: 'You haven\'t uploaded the file.    Please upload a pdf or xml file first.',
+          duration: 4,
+          // description
+        })
+      }
+      else{
+        // <Link to="/Result"> </Link>
+        history.push('/result')
+        notification.success({
+          message: 'You have submitted, please wait patiently, the system is processing, please wait about 1min',
+          duration: 60,
+          // description
+        })
+        // let { history } = props
+        // history.push({pathname: '/result'})
+        // const goTo=({history})=>{
+          // history.push('/result')
+        // }
+      }
+     
     }
     // const getData=()=>{
     //   // 获取服务器返回的json数据
@@ -83,17 +105,18 @@ const Home = () => {
             </Upload>
           </div>
           <div>
-            <Button type="default" shape="round" size="large" >
+            <Button type="default" shape="round" size="large" disabled='true'>
               <SearchOutlined />
-              <span>请选择pdf或者xml格式的文件进行引上下文抽取</span>
+              
+                <span>{fileName ==''?'Please select a pdf or xml file for citation context extraction':fileName}</span>
             </Button>
           </div>
           <div className="submit">
-            <Link to="/Result">
+            {/* <Link to="/Result"> */}
               <Button type="Link" shape="round" size="large" onClick={submit}>
                 Submit{' '}
               </Button>{' '}
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
         <div className="blank"></div>
