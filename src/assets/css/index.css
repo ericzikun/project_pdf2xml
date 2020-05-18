@@ -1,5 +1,17 @@
 @charset "UTF-8";
 @import "~antd/dist/antd.css";
+@font-face {
+  font-family: 'bottomSmartcite';  
+  src: url('../fonts/bottomSmartcite.ttf');		 
+}
+@font-face {
+  font-family: 'bottomContent';  
+  src: url('../fonts/bottomContent.ttf');		 
+}
+@font-face {
+  font-family: 'smartCiteTitle';  
+  src: url('../fonts/smartCiteTitle.ttf');		 
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,8 +25,15 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+.fixall{
+  height:auto;
+  width: 100%;;
+  position:fixed;
+}
 .all{
   height:auto;
+  /* width: auto; */
+  /* position:fixed; */
 }
 .title{
   /* height:30px; */
@@ -23,6 +42,7 @@
   width: 100%;
 
   line-height:30px;
+  /* position: fixed */
 
   /* text-align: right; */
   
@@ -40,7 +60,7 @@
 .topcontent{
   /* padding-left: 100px; */
   /* flex: 1; */
-  
+  font-family: "bottomContent";
 }
 .topright{
   margin-left: 5%;
@@ -50,7 +70,7 @@
 .bottom{
   /* height:200px; */
   /* margin-top: 22%; */
-  height: 23%;
+  height: 18%;
   width: 100%;
   bottom: 0;
   line-height:20px;
@@ -69,24 +89,25 @@
 .bottomdiv1{
   width: 1000px;
   margin-left:100px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .bottomdiv2{
   width:400px;
   margin-right:100px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .bottomsmartcite{
-  font-family: monospace;
+  font-family: 'bottomSmartcite';
   font-size: xx-large;
 }
 .bottomcontent1{
-  font-family: 微软雅黑;
+  font-family:  "bottomContent";;
   margin-right:100px;
-  color:rgba(255, 255, 255, 0.651)
+  color:rgba(255, 255, 255, 0.651);
+  margin-top: 5px;
 }
 .bottomcontent2{
-  font-family: 微软雅黑;
+  font-family: "bottomContent";
   margin-right:100px;
   color:rgba(255, 255, 255, 0.651)
 }
@@ -104,7 +125,7 @@
   backgroundColor:'red'
 } */
 .home{
-  background: #2b2a2a36;
+  background: #220f0f27;
   /* background: #ffffff; */
   /* background:  */
   height: 750px;
@@ -120,12 +141,13 @@
   background: #4b28281e;
 } */
 .smartcite{
-  font-family: fantasy;
+  /* font-family: fantasy; */
+  font-family: "smartCiteTitle";
   color:#2dc17a;
-  font-size: 80px;
+  font-size: 100px;
   font-weight:  bold; 
   text-align: center;
-  padding: 200px 5px 30px 5px;
+  padding: 100px 5px 30px 5px;
   /* padding：50% 5% 30% 5%; */
 }
 .button{
@@ -141,7 +163,7 @@
  
 /* 第二页 */
 .resulttitle{
-  background: #ffffff;
+  background: #fcfcfc;
   height:80px;
   /* height: ; */
   margin-top: 0px;
@@ -149,7 +171,7 @@
   flex-direction: row;
 }
 .smartcite2{
-  font-family: fantasy;
+  font-family: "smartCiteTitle";
   color:#2dc17a;
   font-size: 50px;
   font-weight:  bold; 
@@ -159,10 +181,10 @@
 }
 .searchbutton2{
   padding: 30px;
-  margin-left: 30%;
+  margin-left: 10%;
 }
 .result{
-  background: #2b2a2a36;
+  background:  #220f0f27;
   height:640px;
   margin-top: 0px;
 }
@@ -173,18 +195,27 @@
 .resultcontent1{
   width:30%;
   margin-left: 150px;
-  margin-top:1%;
+  margin-top:0.5%;
   font-family:Microsoft YaHei;
   font-size: 20px;
 }
 .resultcontent2{
   width:40%;
   margin-left: 50px;
-  margin-top:1%;
+  margin-top:0.5%;
   font-family:Microsoft YaHei;
   font-size: 20px;
   /*  */
 }
-.list{
-  background: #ffffff
+.referencelist{
+  background: #ffffff;
+}
+.citationlist{
+
+  background: #ffffff;
+
+  height: 250px;
+  
+  overflow-y:scroll;
+  
 }

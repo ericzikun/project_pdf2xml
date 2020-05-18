@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../assets/css/index.css'
-import { Upload, message, Button } from 'antd'
+import { Upload, message, Button, Spin } from 'antd'
 import { UploadOutlined } from '@ant-design/icons'
 import { Input } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
@@ -12,29 +12,54 @@ import { useHistory } from "react-router-dom";
 const Home = ( ) => {
   const file = []
   const [fileName, setFileName]= useState('')
+  // const [userUploaded,setUserUploaded]= useState(false)
   const [response, setResponse] = useState('')
+  const [isUploading, setUploading] = useState(false)
   const onChange = ({ file }) => {
     console.log('--正在上传的file--', file)
     localStorage.setItem("uploadFileName", file.name);
     setFileName(file.name)
+    // setUserUploaded(true)
     if (file.status == 'uploading'){
+      setUploading(true);
       localStorage.removeItem("fileName");
       localStorage.removeItem("fileRes");
     }
   
     
   }
+  let history = useHistory();
   const onSuccessUpload = (res) => {
-    console.log('--返回的结果--', res)
+    console.log('--返回的结果--', res);
+    setUploading(false);
     localStorage.setItem("fileName", localStorage.getItem("uploadFileName"));
+    setFileName(localStorage.getItem("uploadFileName"));
     localStorage.setItem("fileRes", JSON.stringify(res));
+    if (!isUploading){
+      history.push('/result');
+      notification.success({
+        message: 'Completed',
+        duration: 5,
+        // description
+      })     
+    }
+  }
+  // 上传失败
+  const onFailUpload = () => {
+    setUploading(false);
+    notification.error({
+      message: 'Upload failed, you can refer to the test case in the top right corner and re-upload.',
+      duration: 20,
+      // description
+    })   
   }
     // const { fileList } = this.state
     // const { file } = this.state
     const props = {
         name: 'file',//name得看接口需求，name与接口需要的name一致
         // action: '/test/upload/file',//接口路径
-        action: '/extract',//接口路径
+        action: 'http://114.55.101.144:8080/extract',//接口路径
+        // action: '/extract',
         data: {file} ,//接口需要的参数，无参数可以不写
         multiple: false,//支持多个文件
         showUploadList: true,//展示文件列表
@@ -42,29 +67,30 @@ const Home = ( ) => {
           // "Content-Type": "multipart/form-data"
         },
     }
-    let history = useHistory();
+
+    //  
+    // let history = useHistory();
     const submit=(  )=>{
-      if (!localStorage.getItem("fileName")){
+      if ( isUploading&&!localStorage.getItem("fileName")){
         notification.error({
-          message: 'please wait patiently, the system is processing, Please upload a pdf or xml file first.',
-          duration: 4,
-          // description
+          message: 'please wait patiently, the system is processing...',
+          duration: 8,         
         })
-      } else{
-        // <Link to="/Result"> </Link>
-        history.push('/result')
-        notification.success({
-          message: 'You have submitted, , please wait about 1min',
-          duration: 10,
-          // description
+      } else if( !isUploading && !localStorage.getItem("uploadFileName")){
+        notification.error({
+          message: 'Please upload a pdf or xml file first',
+          duration: 8,     
         })
-        // let { history } = props
-        // history.push({pathname: '/result'})
-        // const goTo=({history})=>{
-          // history.push('/result')
-        // }
       }
+      else{
      
+        // history.push('/result')
+        notification.success({
+          message: 'You have submitted',
+          duration: 5,
+          // description
+        })     
+      }   
     }
     // const getData=()=>{
     //   // 获取服务器返回的json数据
@@ -86,26 +112,27 @@ const Home = ( ) => {
               fileList={file}
               onChange={onChange}
               onSuccess={onSuccessUpload}
+              onError={onFailUpload}
             >
               <Button type="Link" shape="round" size="large">
-                <UploadOutlined /> Select file
+                <UploadOutlined /> Select File
               </Button>
             </Upload>
           </div>
           <div>
             <Button type="default" shape="round" size="large" disabled='true'>
-              <SearchOutlined />
-              
-                <span>{fileName ==''?'Please select a pdf or xml file for citation context extraction':fileName}</span>
+                {isUploading && <Spin></Spin>}
+                {isUploading && <span>Processing... Please wait a moment</span>}
+                {!isUploading && <SearchOutlined />}
+                {!isUploading && <span>{fileName ==''?'Please select a pdf or xml file for citation context extraction':fileName}</span>}
             </Button>
           </div>
-          <div className="submit">
-            {/* <Link to="/Result"> */}
+          {/* 取消submit按钮 */}
+          {/* <div className="submit">             
               <Button type="Link" shape="round" size="large" onClick={submit}>
                 Submit{' '}
-              </Button>{' '}
-            {/* </Link> */}
-          </div>
+              </Button>{' '}          
+          </div> */}
         </div>
         <div className="blank"></div>
       </div>
